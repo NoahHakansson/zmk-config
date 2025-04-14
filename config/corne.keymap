@@ -16,9 +16,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
+            tapping-term-ms = <210>;
+            quick-tap-ms = <210>;
+            flavor = "tap-preferred";
         };
 
         hrl: home_row_layer {
@@ -27,9 +27,9 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
+            tapping-term-ms = <210>;
+            quick-tap-ms = <210>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -62,9 +62,9 @@
 
             bindings = <
 &none  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&to 0  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&none  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                         &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&to 0  &none     &none   &none     &none     &none        &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&none  &none     &none   &none     &none     &none        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                         &none     &none     &kp SPACE    &kp RET    &none      &kp RALT
             >;
 
             label = "Code";
