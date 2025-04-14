@@ -34,8 +34,26 @@
 
         SE_AO: SE_AO {
             compatible = "zmk,behavior-mod-morph";
-            label = "SE_AO";
+            label = "å";
             bindings = <&SE_AO_LOWERCASE>, <&SE_AO_UPPERCASE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        SE_AA: SE_AA {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ä";
+            bindings = <&SE_AA_LOWERCASE>, <&SE_AA_UPPERCASE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        SE_OO: SE_OO {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ö";
+            bindings = <&SE_OO_LOWERCASE>, <&SE_OO_UPPERCASE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -71,6 +89,66 @@
                 <&macro_tap>;
 
             label = "SE_AO_UPPERCASE";
+        };
+
+        SE_AA_LOWERCASE: SE_AA_LOWERCASE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LA(LC(LG(SPACE))))>,
+                <&macro_tap>,
+                <&kp SQT>,
+                <&macro_tap>,
+                <&kp LS(LA(LC(LG(SPACE))))>,
+                <&macro_tap>;
+
+            label = "SE_AA_LOWERCASE";
+        };
+
+        SE_AA_UPPERCASE: SE_AA_UPPERCASE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LA(LC(LG(SPACE))))>,
+                <&macro_tap>,
+                <&kp LS(SQT)>,
+                <&macro_tap>,
+                <&kp LS(LA(LC(LG(SPACE))))>,
+                <&macro_tap>;
+
+            label = "SE_AA_UPPERCASE";
+        };
+
+        SE_OO_LOWERCASE: SE_OO_LOWERCASE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LA(LC(LG(SPACE))))>,
+                <&macro_tap>,
+                <&kp SEMICOLON>,
+                <&macro_tap>,
+                <&kp LS(LA(LC(LG(SPACE))))>,
+                <&macro_tap>;
+
+            label = "SE_OO_LOWERCASE";
+        };
+
+        SE_OO_UPPERCASE: SE_OO_UPPERCASE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LA(LC(LG(SPACE))))>,
+                <&macro_tap>,
+                <&kp LS(SEMICOLON)>,
+                <&macro_tap>,
+                <&kp LS(LA(LC(LG(SPACE))))>,
+                <&macro_tap>;
+
+            label = "SE_OO_UPPERCASE";
         };
     };
 
@@ -147,10 +225,10 @@
         SE {
             label = "SE";
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &SE_AO
-&to 0  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &none  &none  &none    &to 0  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none      &none  &none  &none   &SE_AO
+&to 0  &none  &none  &none  &none  &none    &none  &none      &none  &none  &SE_OO  &SE_AA
+&none  &none  &none  &none  &none  &none    &none  &none      &none  &none  &none   &none
+                     &none  &none  &none    &to 0  &kp LSHFT  &none
             >;
         };
     };
