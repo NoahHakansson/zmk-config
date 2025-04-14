@@ -33,6 +33,38 @@
         };
     };
 
+    macros {
+        SE_AO_LOWERCASE: SE_AO {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LA(LC(LG(SPACE))))>,
+                <&macro_tap>,
+                <&kp LEFT_BRACKET>,
+                <&macro_tap>,
+                <&kp LS(LA(LC(LG(SPACE))))>,
+                <&macro_tap>;
+
+            label = "SE_AO";
+        };
+
+        SE_AO_UPPERCASE: SE_AO_UPPERCASE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LA(LC(LG(SPACE))))>,
+                <&macro_tap>,
+                <&kp LS(LEFT_BRACKET)>,
+                <&macro_tap>,
+                <&kp LS(LA(LC(LG(SPACE))))>,
+                <&macro_tap>;
+
+            label = "SE_AO_UPPERCASE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
