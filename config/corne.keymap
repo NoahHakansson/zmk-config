@@ -154,6 +154,14 @@
 
             label = "SE_OO_UPPERCASE";
         };
+
+        colon_macro: colon_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON>, <&macro_wait_time 16>;
+
+            label = "COLON_MACRO";
+        };
     };
 
     keymap {
@@ -185,7 +193,7 @@
 
             bindings = <
 &none  &kp EXCL     &kp AT        &kp HASH       &kp DLLR  &none    &kp CARET  &kp PLUS        &kp LPAR  &kp RPAR  &kp QUESTION  &kp GRAVE
-&to 0  &kp PERCENT  &kp ASTERISK  &kp AMPERSAND  &kp PIPE  &none    &kp MINUS  &kp EQUAL       &kp LBRC  &kp RBRC  &kp COLON     &none
+&to 0  &kp PERCENT  &kp ASTERISK  &kp AMPERSAND  &kp PIPE  &none    &kp MINUS  &kp EQUAL       &kp LBRC  &kp RBRC  &colon_macro  &none
 &none  &kp BSLH     &kp LT        &kp GT         &none     &none    &kp BSLH   &kp UNDERSCORE  &kp LBKT  &kp RBKT  &none         &none
                                   &none          &none     &to 2    &to 0      &kp LSHFT       &none
             >;
