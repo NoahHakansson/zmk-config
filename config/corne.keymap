@@ -71,7 +71,8 @@
                 <&kp LEFT_BRACKET>,
                 <&macro_tap>,
                 <&kp LS(LA(LC(LG(SPACE))))>,
-                <&macro_tap>;
+                <&macro_tap>,
+                <&macro_wait_time 16>;
 
             label = "SE_AO";
         };
@@ -86,7 +87,8 @@
                 <&kp LS(LEFT_BRACKET)>,
                 <&macro_tap>,
                 <&kp LS(LA(LC(LG(SPACE))))>,
-                <&macro_tap>;
+                <&macro_tap>,
+                <&macro_wait_time 16>;
 
             label = "SE_AO_UPPERCASE";
         };
@@ -101,7 +103,8 @@
                 <&kp SQT>,
                 <&macro_tap>,
                 <&kp LS(LA(LC(LG(SPACE))))>,
-                <&macro_tap>;
+                <&macro_tap>,
+                <&macro_wait_time 16>;
 
             label = "SE_AA_LOWERCASE";
         };
@@ -116,7 +119,8 @@
                 <&kp LS(SQT)>,
                 <&macro_tap>,
                 <&kp LS(LA(LC(LG(SPACE))))>,
-                <&macro_tap>;
+                <&macro_tap>,
+                <&macro_wait_time 16>;
 
             label = "SE_AA_UPPERCASE";
         };
