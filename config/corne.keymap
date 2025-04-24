@@ -58,6 +58,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        esc_tidle: esc_tidle {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ESC_TIDLE";
+            bindings = <&kp ESC>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -176,7 +185,7 @@
 
             bindings = <
 &kp SINGLE_QUOTE  &kp Q         &kp W        &kp E                 &kp R                     &kp T       &kp DELETE  &kp Y            &kp U          &kp I        &kp O    &kp P
-&gresc            &kp A         &hrm LGUI S  &hrm LSHIFT D         &hrm LEFT_ALT F           &hrl 4 G    &kp BSPC    &hrm LEFT_ALT H  &hrm LSHIFT J  &hrm LGUI K  &kp L    &kp SEMI
+&esc_tidle        &kp A         &hrm LGUI S  &hrm LSHIFT D         &hrm LEFT_ALT F           &hrl 4 G    &kp BSPC    &hrm LEFT_ALT H  &hrm LSHIFT J  &hrm LGUI K  &kp L    &kp SEMI
 &sl 5             &hrm LCTRL Z  &kp X        &kp C                 &kp V                     &kp B       &kp FSLH    &hrm LCTRL N     &kp M          &kp COMMA    &kp DOT  &kp BSLH
                                              &kp LC(LA(LS(LGUI)))  &hrm LS(LA(LCTRL)) SPACE  &sl 1       &kp RET     &hrm LSHIFT TAB  &sl 2
             >;
