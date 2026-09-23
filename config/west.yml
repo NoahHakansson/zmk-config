@@ -9,10 +9,10 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3
       import: app/west.yml
     - name: nice-luffy-gear-five
       remote: NoahHakansson
-      revision: main
+      revision: 1d203a9b60d2b537f308186fe8dc247df6633b23
   self:
     path: config
